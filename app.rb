@@ -14,10 +14,6 @@ Twilio.configure do |config|
   config.auth_token = 'd743a50ba1688eba1cdba47a4eb63e51'
 end
 
-get '/' do
-  'lol'
-end
-
 get '/receive' do
   @Cclient = Cleverbot::Client.new
   @Cclient.write params[:Body]
